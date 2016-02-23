@@ -3,10 +3,10 @@
 
   angular
     .module('red')
-    .controller('MainController', MainController);
+    .controller('EncountersCtrl', EncountersCtrl);
 
   /** @ngInject */
-  function MainController($scope) {
+  function EncountersCtrl($scope) {
       this.online = true;
   }
 
