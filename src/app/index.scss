@@ -4,7 +4,10 @@
  */
 // bower:scss
 // endbower
+@import './main/main';
 @import './check-in/check-in';
+@import './encounters/encounters';
+@import './report/report';
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
@@ -42,6 +45,66 @@ html, body {
 	img { width: 42%; }
   h1  { text-align:center; }
 
+}
+
+// My Added Styles
+
+%base-page-style {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #FFF;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-header {
+  font-family: 'Roboto';
+  font-weight: 100;
+  font-size: 2.5rem;
+
+  span {
+    display: block;
+    font-size: 1.25rem;
+  }
+}
+
+%base-button-style {
+  font-family: 'Roboto';
+  font-size: 2.5rem;
+  font-weight: normal;
+  background-color: #000;
+  color: #FFF;
+  width: 100%;
+  padding: 1rem 2rem;
+  border: 0;
+  cursor: pointer;
+}
+
+%base-input-style {
+  background-color: #000;
+  color: #FFF;
+  font-size: 1.15rem;
+  height: 2rem;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 2rem;
+  text-indent: 0.5rem;
+}
+
+%base-dropdown-style {
+  background-color: #000;
+  color: $red-color;
+  font-size: 1.15rem;
+  height: 2rem;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #FFF;
+  appearance: none;
+  text-indent: 0.5rem;
 }
 
 /**

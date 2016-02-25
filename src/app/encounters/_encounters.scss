@@ -1,0 +1,30 @@
+.encounters-page {
+  @extend %base-page-style;
+  background-color: #FFF;
+  color: #000;
+
+}
+
+.encounters-list {
+  flex: 1;
+  list-style: none;
+  text-align: left;
+  overflow: scroll;
+  margin: 0;
+
+  li {
+    padding: 0.5rem 0;
+  }
+}
+
+.encounters-footer {
+  display: flex;
+  align-items: center;
+  flex: 0.5;
+  background-color: #000;
+  padding: 0 2rem;
+}
+
+.report-button {
+  @extend %base-button-style;
+}

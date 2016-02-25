@@ -6,9 +6,16 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock($log) {
+  function runBlock($log, $rootScope, $state, $cookies) {
 
-    $log.debug('Run block end!');
+    $rootScope.$state = $state;
+
+    $log.debug('Hello - Your app is running!');
+
+    $rootScope.$on('$stateChangeStart', function(event, toState){
+      $rootScope.stateName = toState.name;
+      $rootScope.user = $cookies.getObject('mars_user');
+    });
   }
 
 })();

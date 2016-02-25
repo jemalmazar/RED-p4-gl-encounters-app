@@ -1,39 +1,17 @@
 $red-color: #ed4343;
 $red-font: 'Roboto Slab', serif;
 
-.check-in {
-  display: flex;
-  flex-direction: column;
-  background-color: #000;
-  color: #FFF;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  text-align: center;
+.check-in-page {
+  @extend %base-page-style;
 
-}
-
-.register-header {
-  font-family: 'Roboto';
-  font-weight: 100;
-  font-size: 2.5rem;
+  button { margin-top: 9rem; }
 }
 
 .check-in-form {
-  font-family: $red-font;
-  flex-direction: column;
   padding: 0 2rem;
 
   input {
-    background-color: #000;
-    color: #FFF;
-    font-size: 1.15rem;
-    height: 2rem;
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid #FFF;
-    margin-bottom: 2rem;
-    text-indent: 0.5rem;
+    @extend %base-input-style;
   }
 
   input::placeholder {
@@ -43,15 +21,7 @@ $red-font: 'Roboto Slab', serif;
 }
 
 .job-select {
-  background-color: #000;
-  color: $red-color;
-  font-size: 1.15rem;
-  height: 2rem;
-  width: 100%;
-  border: 0;
-  border-bottom: 1px solid #FFF;
-  appearance: none;
-  text-indent: 0.5rem;
+  @extend %base-dropdown-style;
 
   option {
     background-color: #FFF;
@@ -59,14 +29,5 @@ $red-font: 'Roboto Slab', serif;
 }
 
 .check-in-button {
-  font-family: 'Roboto';
-  font-size: 2.5rem;
-  font-weight: normal;
-  background-color: #000;
-  color: #FFF;
-  width: 100%;
-  padding: 1rem 2rem;
-  border: 0;
-  cursor: pointer;
-  margin-top: 9rem;
+  @extend %base-button-style;
 }

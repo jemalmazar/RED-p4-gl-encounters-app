@@ -1,0 +1,22 @@
+.welcome-page {
+  @extend %base-page-style;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.enter-button {
+
+  a {
+    display: block;
+    background: #FFF;
+    height: 75px;
+    width: 75px;
+    cursor: pointer
+  }
+
+}
+
+.tap-circle {
+  font-family: "Roboto";
+  font-weight: 100;
+}

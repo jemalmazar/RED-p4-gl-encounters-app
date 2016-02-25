@@ -1,3 +1,22 @@
-<div class="report">
-  <h1>Report</h1>
+<div class="report-page">
+  <h1 class="page-header">
+    Report Encounter
+    <span>Safety on Mars is your responsibility</span>
+  </h1>
+
+  <div class="report-form">
+    <div class="alien-dropdown">
+      <select class="alien-select" name="alienlist" ng-model="report.atype"> 
+        <option value="">Select an alien type</option>
+        <option value="{{ alien.type }}" ng-repeat="alien in alienlist">{{ alien.type }}</option>
+      </select>
+    </div>
+
+    <div class="alien-action">
+      <textarea name="name" rows="10" cols="40" placeholder="Action taken?" ng-model="report.action"></textarea>
+    </div>
+
+    <button class="submit-report-button" ng-click="submit($event)">Submit Report</button>
+  </div>
+
 </div>

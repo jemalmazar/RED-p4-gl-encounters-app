@@ -6,7 +6,7 @@
     .controller('CheckInCtrl', CheckInCtrl);
 
   /** @ngInject */
-  function CheckInCtrl($scope, $http) {
+  function CheckInCtrl($scope, $http, $rootScope, $state, $cookies) {
     var JOBS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/jobs';
     var COLONIST_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/colonists';
     // placeholder object for POST request to /colonists
@@ -27,11 +27,12 @@
       $http({
         method: 'POST',
         url: COLONIST_POST_URL,
-        data: {
-          'colonist': $scope.colonist
-        }
+        data: { 'colonist': $scope.colonist }
       }).then(function(response){
-        console.log(response);
+
+        $cookies.putObject('mars_user', response.data.colonist);
+        $state.go('encounters');
+
       }, function(error){
         console.log(error);
       });

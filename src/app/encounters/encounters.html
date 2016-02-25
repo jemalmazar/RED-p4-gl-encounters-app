@@ -1,4 +1,15 @@
-<div class="encounters">
-  <h1>Encounters</h1>
-
+<div class="encounters-page">
+  <h1 class="page-header">
+    Recent Encounters
+    <span>See an alien? Report it!</span>
+  </h1>
+  <ul class="encounters-list">
+    <li ng-repeat="reports in encounters">
+      {{ reports.date }} - {{ reports.atype }} <br />
+      {{ reports.action }}
+    </li>
+  </ul>
+  <footer class="encounters-footer">
+    <button class="report-button" ng-click="report($event)">Report Encounter</button>
+  </footer>
 </div>

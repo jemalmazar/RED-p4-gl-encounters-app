@@ -6,8 +6,13 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope) {
-      this.online = true;
+  function MainController($scope, $state) {
+
+    $scope.enter = function(e){
+      e.preventDefault();
+      $state.go('check-in');
+    };
+
   }
 
 })();
