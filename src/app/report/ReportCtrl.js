@@ -27,14 +27,19 @@
     $scope.submit = function(e){
       e.preventDefault();
 
-      $http({
-        method: 'POST',
-        url: REPORT_POST_URL,
-        data: { 'encounter' : $scope.report }
-      }).then(function(response){
-        console.log($scope.report);
-        $state.go('encounters');
-      });
+      if(!$scope.reportForm.$invalid) {
+        $http({
+          method: 'POST',
+          url: REPORT_POST_URL,
+          data: { 'encounter' : $scope.report }
+        }).then(function(response){
+
+          $state.go('encounters');
+        });
+      } else {
+        $scope.taskValidate = true;
+      }
+
 
     };
 

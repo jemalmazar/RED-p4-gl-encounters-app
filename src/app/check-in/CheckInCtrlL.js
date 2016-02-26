@@ -11,6 +11,7 @@
     var COLONIST_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/colonists';
     // placeholder object for POST request to /colonists
     $scope.colonist = {};
+    $scope.taskValidate = false;
     // fetch jobs data from API
     $http({
       method: 'GET',
@@ -24,18 +25,24 @@
     $scope.login = function(e){
       e.preventDefault();
 
-      $http({
-        method: 'POST',
-        url: COLONIST_POST_URL,
-        data: { 'colonist': $scope.colonist }
-      }).then(function(response){
+      if(!$scope.checkInForm.$invalid){
+        console.log('posted');
+        $http({
+          method: 'POST',
+          url: COLONIST_POST_URL,
+          data: { 'colonist': $scope.colonist }
+        }).then(function(response){
 
-        $cookies.putObject('mars_user', response.data.colonist);
-        $state.go('encounters');
+          $cookies.putObject('mars_user', response.data.colonist);
+          $state.go('encounters');
 
-      }, function(error){
-        console.log(error);
-      });
+        }, function(error){
+          console.log(error);
+        });
+      } else {
+        $scope.taskValidate = true;
+      }
+
     };
 
   }

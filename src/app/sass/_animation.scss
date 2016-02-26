@@ -1,0 +1,18 @@
+// Form Feedback Animations
+@keyframes invalid {
+  0% { border: 1px solid transparent}
+  100% { border: 1px solid red }
+}
+
+.invalid {
+  input, select, textarea {
+    &.ng-invalid{
+      animation: invalid 1s infinite;
+    }
+  }
+}
+
+// Page Transition Animations
+[ui-view].ng-enter, [ui-view].ng-leave {
+
+}

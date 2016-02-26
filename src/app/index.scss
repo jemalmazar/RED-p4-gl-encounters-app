@@ -4,10 +4,10 @@
  */
 // bower:scss
 // endbower
-@import './main/main';
-@import './check-in/check-in';
-@import './encounters/encounters';
-@import './report/report';
+@import './sass/main';
+@import './sass/check-in';
+@import './sass/encounters';
+@import './sass/report';
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 

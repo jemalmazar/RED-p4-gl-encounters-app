@@ -4,16 +4,22 @@
     <span>Safety on Mars is your responsibility</span>
   </h1>
 
-  <div class="report-form">
+  <form class="report-form" name="reportForm" ng-class="{ 'invalid': taskValidate }">
     <div class="alien-dropdown">
-      <select class="alien-select" name="alienlist" ng-model="report.atype"> 
+      <select class="alien-select" name="alienlist" ng-model="report.atype" required>
         <option value="">Select an alien type</option>
         <option value="{{ alien.type }}" ng-repeat="alien in alienlist">{{ alien.type }}</option>
       </select>
-    </div>
+    </form>
 
     <div class="alien-action">
-      <textarea name="name" rows="10" cols="40" placeholder="Action taken?" ng-model="report.action"></textarea>
+      <textarea name="name"
+                rows="10"
+                cols="40"
+                placeholder="Action taken?"
+                ng-model="report.action"
+                required
+                minlength="3"></textarea>
     </div>
 
     <button class="submit-report-button" ng-click="submit($event)">Submit Report</button>
