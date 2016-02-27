@@ -26,7 +26,7 @@
       e.preventDefault();
 
       if(!$scope.checkInForm.$invalid){
-        console.log('posted');
+
         $http({
           method: 'POST',
           url: COLONIST_POST_URL,

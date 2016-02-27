@@ -14,5 +14,93 @@
 
 // Page Transition Animations
 [ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: all .5s ease-in-out;
+}
+// .ng-enter is the start point of animation on page load
+[ui-view].ng-enter {
+  .home & {
+    opacity: 0;
+  }
 
+  .check-in & {
+    opacity: 0;
+    transform: translate(0, -1000px);
+  }
+
+  .encounters & {
+    opacity: 0;
+    transform: translate(500px, 0);
+  }
+
+  .report & {
+    opacity: 0;
+    transform: translate(-500px, 0);
+  }
+}
+// .ng-enter-active is the end point of animation on page load
+[ui-view].ng-enter-active {
+  .home & {
+    opacity: 1;
+  }
+
+  .check-in & {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  .encounters & {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  .report & {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+// .ng-leave is the start point of animation on page exit
+[ui-view].ng-leave {
+  .home & {
+    opacity: 1;
+  }
+
+  .check-in & {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  .encounters & {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  .report & {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+// .ng-leave is the end point of animation on page exit
+[ui-view].ng-leave-active {
+  .home & {
+    opacity: 0;
+  }
+
+  .check-in & {
+    opacity: 0;
+    transform: scale(0, 0);
+
+  }
+
+  .encounters & {
+    opacity: 0;
+    transform: translate(-500px, 0);
+  }
+
+  .report & {
+    opacity: 0;
+    transform: translate(500px, 0);
+  }
 }

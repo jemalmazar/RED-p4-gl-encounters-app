@@ -14,7 +14,6 @@
 
     $rootScope.$on('$stateChangeStart', function(event, toState){
       $rootScope.stateName = toState.name;
-      // $rootScope.user = $cookies.getObject('mars_user');
     });
   }
 
