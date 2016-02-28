@@ -1,15 +1,23 @@
 <div class="encounters-page">
-  <h1 class="page-header">
+  <header class="page-header">
+    <a ui-sref="home"><img src="../app/images/green-lantern-logo.png" alt="" /></a>
+    <p><span>Green Lantern Corps</span> <br />{{ username}} - ({{ job }})</p>
+  </header>
+
+  <h1 class="page-heading">
     Recent Encounters
     <span>See an alien? Report it!</span>
   </h1>
+
   <ul class="encounters-list">
     <li ng-repeat="reports in encounters">
       {{ reports.date }} - {{ reports.atype }} <br />
       {{ reports.action }}
     </li>
   </ul>
+
   <footer class="encounters-footer">
     <button class="report-button" ng-click="report($event)">Report Encounter</button>
   </footer>
+
 </div>

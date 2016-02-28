@@ -1,17 +1,26 @@
-$red-color: #ed4343;
-$red-font: 'Roboto Slab', serif;
-
 .report-page {
   @extend %base-page-style;
 }
 
 .report-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 0 2rem;
+
+  fieldset {
+    flex: 1;
+    border: 0;
+  }
 }
 
 .alien-select {
   @extend %base-dropdown-style;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+
+  &:focus{
+    outline-color: #007e48;
+  }
 
   option {
     background-color: #FFF;
@@ -24,16 +33,21 @@ $red-font: 'Roboto Slab', serif;
     font-family: 'Roboto';
     font-size: 1.15rem;
     width: 100%;
+    padding: 0;
     border: 0;
     resize: none;
+
+    &:focus{
+      outline-color: #007e48;
+    }
   }
 
   textarea::placeholder {
-    color: $red-color;
+    color: #007e48;
   }
 }
 
 .submit-report-button {
   @extend %base-button-style;
-  margin-top: 6rem;
+
 }

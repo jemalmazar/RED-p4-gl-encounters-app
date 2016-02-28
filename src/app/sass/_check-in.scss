@@ -1,21 +1,31 @@
-$red-color: #ed4343;
-$red-font: 'Roboto Slab', serif;
-
 .check-in-page {
   @extend %base-page-style;
+  h1 {
+    padding: 2rem;
+    margin: 0;
+  }
 
-  button { margin-top: 9rem; }
 }
 
 .check-in-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 0 2rem;
 
   input {
     @extend %base-input-style;
+
   }
 
   input::placeholder {
-    color: $red-color;
+    color: #007e48;
+  }
+
+  fieldset {
+    display: flex;
+    flex: 1;
+    border: 0;
   }
 
 }

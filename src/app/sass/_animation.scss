@@ -1,7 +1,60 @@
+// Enter Button Animation
+
+@keyframes button-pulse {
+  0% {
+    box-shadow:
+      0 0 0 1rem rgba(0, 0, 0, 0),
+      0 0 0 2rem rgba(0, 0, 0, 0),
+      0 0 0 3rem rgba(0, 0, 0, 0)
+  }
+  10% {
+    box-shadow:
+      0 0 0 1.1rem rgba(0, 0, 0, 0.5),
+      0 0 0 2.25rem rgba(0, 0, 0, 0),
+      0 0 0 3.25rem rgba(0, 0, 0, 0)
+  }
+  30% {
+    box-shadow:
+      0 0 0 1.25rem rgba(0, 0, 0, 0.75),
+      0 0 0 2.5rem rgba(0, 0, 0, 0.25),
+      0 0 0 3.5rem rgba(0, 0, 0, 0)
+
+  }
+  50% {
+    box-shadow:
+      0 0 0 1.5rem rgba(0, 0, 0, 0.75),
+      0 0 0 2.75rem rgba(0, 0, 0, 0.5),
+      0 0 0 3.75rem rgba(0, 0, 0, 0.1)
+
+  }
+   70% {
+    box-shadow:
+      0 0 0 1.25rem rgba(0, 0, 0, 0.75),
+      0 0 0 2.5rem rgba(0, 0, 0, 0.25),
+      0 0 0 3.5rem rgba(0, 0, 0, 0)
+
+  }
+  90%{
+    box-shadow:
+      0 0 0 1.1rem rgba(0, 0, 0, 0.5),
+      0 0 0 2.25rem rgba(0, 0, 0, 0),
+      0 0 0 3.25rem rgba(0, 0, 0, 0)
+  }
+
+  100% {
+   box-shadow:
+    0 0 0 1rem rgba(0, 0, 0, 0),
+  	0 0 0 2rem rgba(0, 0, 0, 0),
+  	0 0 0 3rem rgba(0, 0, 0, 0),
+
+    }
+  }
+
 // Form Feedback Animations
+
 @keyframes invalid {
   0% { border: 1px solid transparent}
-  100% { border: 1px solid red }
+  100% { border: 1px solid #FFF011 }
 }
 
 .invalid {
@@ -13,11 +66,12 @@
 }
 
 // Page Transition Animations
+
 [ui-view].ng-enter, [ui-view].ng-leave {
   position: absolute;
   left: 0;
   right: 0;
-  transition: all .5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 // .ng-enter is the start point of animation on page load
 [ui-view].ng-enter {
@@ -27,7 +81,7 @@
 
   .check-in & {
     opacity: 0;
-    transform: translate(0, -1000px);
+    transform: translate(0, -500px);
   }
 
   .encounters & {

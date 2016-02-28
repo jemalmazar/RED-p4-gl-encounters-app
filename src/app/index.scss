@@ -4,22 +4,21 @@
  */
 // bower:scss
 // endbower
-@import './sass/main';
-@import './sass/check-in';
-@import './sass/encounters';
-@import './sass/report';
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
+$main-color: #007e48;
 $red-color: #ed4343;
 $red-font: 'Roboto Slab', serif;
 
 html, body {
+  background-color: #000;
   width:100%;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: $red-font;
+  overflow: hidden;
 }
 
 .browsehappy {
@@ -49,6 +48,33 @@ html, body {
 
 // My Added Styles
 
+.page-header {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  background: #FFF;
+  height: 75px;
+  border-bottom: 3px solid $main-color;
+
+  p {
+    font-size: 1rem;
+    color: #000;
+    text-align: left;
+
+  }
+
+  span {
+    font-family: 'Green_Lantern';
+    color: #007e48;
+  }
+  img {
+    height: 3rem;
+    width: 3rem;
+    padding: 0 1rem;
+  }
+}
+
 %base-page-style {
   display: flex;
   flex-direction: column;
@@ -60,10 +86,10 @@ html, body {
   text-align: center;
 }
 
-.page-header {
-  font-family: 'Roboto';
-  font-weight: 100;
+.page-heading {
+  font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
+  padding: 0 2rem;
 
   span {
     display: block;
@@ -72,8 +98,8 @@ html, body {
 }
 
 %base-button-style {
-  font-family: 'Roboto';
-  font-size: 2.5rem;
+  font-family: 'Green_Lantern', sans-serif;
+  font-size: 2.25rem;
   font-weight: normal;
   background-color: #000;
   color: #FFF;
@@ -81,23 +107,31 @@ html, body {
   padding: 1rem 2rem;
   border: 0;
   cursor: pointer;
+  letter-spacing: 0.1rem;
+
+  &:focus{
+    outline-color: #007e48;
+  }
 }
 
 %base-input-style {
   background-color: #000;
-  color: #FFF;
+  color: $main-color;
   font-size: 1.15rem;
   height: 2rem;
   width: 100%;
   border: 0;
   border-bottom: 1px solid #FFF;
-  margin-bottom: 2rem;
   text-indent: 0.5rem;
+
+  &:focus{
+    outline-color: #007e48;
+  }
 }
 
 %base-dropdown-style {
   background-color: #000;
-  color: $red-color;
+  color: $main-color;
   font-size: 1.15rem;
   height: 2rem;
   width: 100%;
@@ -105,6 +139,10 @@ html, body {
   border-bottom: 1px solid #FFF;
   appearance: none;
   text-indent: 0.5rem;
+
+  &:focus{
+    outline-color: #007e48;
+  }
 }
 
 /**

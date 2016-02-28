@@ -2,21 +2,35 @@
   @extend %base-page-style;
   justify-content: space-around;
   align-items: center;
+  background: url('../app/images/oa.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: "Roboto";
+  font-weight: 100;
+
+  h1 {
+    font-family: 'Green_Lantern';
+    color: rgba(0, 0, 0, 0.75);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  h2 {
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+  }
 }
 
 .enter-button {
 
   a {
     display: block;
-    background: #FFF;
-    height: 75px;
-    width: 75px;
-    cursor: pointer
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    animation: button-pulse 1.5s infinite;
   }
 
-}
-
-.tap-circle {
-  font-family: "Roboto";
-  font-weight: 100;
 }

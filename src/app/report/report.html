@@ -1,28 +1,38 @@
 <div class="report-page">
-  <h1 class="page-header">
+  <header class="page-header">
+    <a ui-sref="home"><img src="../app/images/green-lantern-logo.png" alt="" /></a>
+    <p><span>Green Lantern Corps</span> <br />{{ username}} - ({{ job }})</p>
+  </header>
+  
+  <h1 class="page-heading">
     Report Encounter
-    <span>Safety on Mars is your responsibility</span>
+    <span>Galactic safety is your responsibility</span>
   </h1>
 
   <form class="report-form" name="reportForm" ng-class="{ 'invalid': taskValidate }">
-    <div class="alien-dropdown">
-      <select class="alien-select" name="alienlist" ng-model="report.atype" required>
-        <option value="">Select an alien type</option>
-        <option value="{{ alien.type }}" ng-repeat="alien in alienlist">{{ alien.type }}</option>
-      </select>
-    </form>
+    <fieldset>
+      <div class="alien-dropdown">
+        <select class="alien-select" name="alienlist" ng-model="report.atype" required>
+          <option value="">Select an alien type</option>
+          <option value="{{ alien.type }}" ng-repeat="alien in alienlist">{{ alien.type }}</option>
+        </select>
+      </div>
 
-    <div class="alien-action">
-      <textarea name="name"
-                rows="10"
-                cols="40"
-                placeholder="Action taken?"
-                ng-model="report.action"
-                required
-                minlength="3"></textarea>
-    </div>
+      <div class="alien-action">
+        <textarea name="name"
+                  rows="10"
+                  cols="40"
+                  placeholder="Action taken?"
+                  ng-model="report.action"
+                  required
+                  minlength="3"></textarea>
+      </div>
+    </fieldset>
 
-    <button class="submit-report-button" ng-click="submit($event)">Submit Report</button>
-  </div>
+    <fieldset>
+      <button class="submit-report-button" ng-click="submit($event)">Submit Report</button>
+    </fieldset>
+
+  </form>
 
 </div>

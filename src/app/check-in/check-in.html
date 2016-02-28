@@ -1,31 +1,42 @@
 <div class="check-in-page">
-  <h1 class="page-header">Register</h1>
+
+  <header class="page-header">
+    <a ui-sref="home"><img src="../app/images/green-lantern-logo.png" alt="" /></a>
+    <p><span>Green Lantern Corps</span></p>
+  </header>
+
+  <h1 class="page-heading">Register</h1>
 
   <form class="check-in-form" name="checkInForm" ng-class="{ 'invalid': taskValidate }">
+    <fieldset>
+      <input type="text"
+             placeholder="Name"
+             ng-model="colonist.name"
+             required
+             minlength="2"/><br />
+      <input type="number"
+             placeholder="Age"
+             min = 19
+             ng-model="colonist.age"/
+             required><br />
 
-    <input type="text"
-           placeholder="Name"
-           ng-model="colonist.name"
-           required
-           minlength="2"/><br />
-    <input type="number"
-           placeholder="Age"
-           ng-model="colonist.age"/
-           required><br />
+      <div class="job-dropdown">
+        <select class="job-select"
+                name="joblist"
+                ng-model="colonist.job_id"
+                required>
 
-    <div class="job-dropdown">
-      <select class="job-select"
-              name="joblist"
-              ng-model="colonist.job_id"
-              required>
+          <option value="">Select Occupation</option>
+          <option value="{{ job.id }}" ng-repeat="job in joblist">{{ job.name }}</option>
 
-        <option value="">Select Occupation</option>
-        <option value="{{ job.id }}" ng-repeat="job in joblist">{{ job.name }}</option>
+        </select>
+      </div>
+    </fieldset>
 
-      </select>
-    </div>
+    <fieldset>
+      <button class="check-in-button" ng-click="login($event)">Check in</button>
+    </fieldset>
 
-    <button class="check-in-button" ng-click="login($event)">Check in</button>
   </form>
 
 </div>

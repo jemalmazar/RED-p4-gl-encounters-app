@@ -1,15 +1,18 @@
 .encounters-page {
   @extend %base-page-style;
-  background-color: #FFF;
-  color: #000;
+  // background-color: #FFF;
+  // color: #000;
 
+  .page-header {
+    text-shadow: none;
+  }
 }
 
 .encounters-list {
   flex: 1;
   list-style: none;
   text-align: left;
-  overflow: scroll;
+  overflow: auto;
   margin: 0;
 
   li {
