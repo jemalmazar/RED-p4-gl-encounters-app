@@ -18,8 +18,6 @@
       url: ENCOUNTERS_GET_URL
     }).then(function(response){
         $scope.encounters = response.data.encounters;
-    }, function(error){
-
     });
 
     $scope.report = function(e){

@@ -22,8 +22,6 @@
       url: ALIENS_GET_URL
     }).then(function(response){
         $scope.alienlist = response.data.aliens;
-    }, function(error){
-
     });
 
     $scope.submit = function(e){

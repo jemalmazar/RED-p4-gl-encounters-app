@@ -42,11 +42,10 @@
   }
 
   100% {
-   box-shadow:
-    0 0 0 1rem rgba(0, 0, 0, 0),
-  	0 0 0 2rem rgba(0, 0, 0, 0),
-  	0 0 0 3rem rgba(0, 0, 0, 0),
-
+    box-shadow:
+      0 0 0 1rem rgba(0, 0, 0, 0),
+    	0 0 0 2rem rgba(0, 0, 0, 0),
+    	0 0 0 3rem rgba(0, 0, 0, 0),
     }
   }
 
@@ -59,7 +58,7 @@
 
 .invalid {
   input, select, textarea {
-    &.ng-invalid{
+    &.ng-invalid {
       animation: invalid 1s infinite;
     }
   }
@@ -145,7 +144,6 @@
   .check-in & {
     opacity: 0;
     transform: scale(0, 0);
-
   }
 
   .encounters & {

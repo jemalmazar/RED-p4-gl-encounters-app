@@ -49,5 +49,8 @@
 
 .submit-report-button {
   @extend %base-button-style;
+  button {
+      font-size: 0.1rem;
+  }
 
 }

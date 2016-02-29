@@ -1,5 +1,6 @@
 .check-in-page {
   @extend %base-page-style;
+
   h1 {
     padding: 2rem;
     margin: 0;
@@ -15,7 +16,6 @@
 
   input {
     @extend %base-input-style;
-
   }
 
   input::placeholder {
