@@ -1,0 +1,9 @@
+{
+  "firebase": "gl-encounters",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
