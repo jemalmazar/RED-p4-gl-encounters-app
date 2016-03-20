@@ -6,17 +6,15 @@
     .controller('EncountersCtrl', EncountersCtrl);
 
   /** @ngInject */
-  function EncountersCtrl($scope, $http, $state, $cookies) {
-    var ENCOUNTERS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
+  function EncountersCtrl($scope, $state, $cookies, apiFactory) {
 
     $scope.username = $cookies.getObject('mars_user').name;
     $scope.job = $cookies.getObject('mars_user').job.name;
     $scope.encounters = {};
 
-    $http({
-      method: 'GET',
-      url: ENCOUNTERS_GET_URL
-    }).then(function(response){
+    apiFactory
+    .getEncounters()
+    .then(function(response){
         $scope.encounters = response.data.encounters;
     });
 
