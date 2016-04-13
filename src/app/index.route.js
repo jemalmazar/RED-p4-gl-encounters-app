@@ -17,27 +17,27 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/main/main.html',
+        templateUrl: './app/main/main.html',
         controller: 'MainController'
       })
       .state('check-in', {
         url: '/check-in',
-        templateUrl: 'app/check-in/check-in.html',
+        templateUrl: './app/check-in/check-in.html',
         controller: 'CheckInCtrl'
       })
       .state('encounters', {
         url: '/encounters',
-        templateUrl: '/app/encounters/encounters.html',
+        templateUrl: './app/encounters/encounters.html',
         controller: 'EncountersCtrl'
       })
       .state('report', {
         url: '/report',
-        templateUrl: '/app/report/report.html',
+        templateUrl: './app/report/report.html',
         controller: 'ReportCtrl'
       })
       .state('report-filed', {
         url: '/report-filed',
-        templateUrl: '/app/report/report-filed.html',
+        templateUrl: './app/report/report-filed.html',
         controller: 'ReportCtrl'
       });
 

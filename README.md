@@ -1,6 +1,6 @@
 # RED Academy Project 4 - GL Encounters App
 
-View the deployed web application at: https://gl-encounters.firebaseapp.com/ (_currently buggy_)
+View the deployed web application at: https://gl-encounters.firebaseapp.com/
 
 **Project Description**
 
